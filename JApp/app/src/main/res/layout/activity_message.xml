@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MessageActivity"
+    tools:deviceIds="wear">
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:backgroundTintMode="multiply"
+        android:elevation="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:text="Message"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="@+id/sendmessage"
+        app:layout_constraintEnd_toStartOf="@+id/sendmessage"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sendmessage"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/sendmessage"
+        android:layout_width="135dp"
+        android:layout_height="87dp"
+        android:elevation="10dp"
+        android:text="Send message"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        style="@android:style/Widget.ScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay"
+        app:layout_constraintBottom_toTopOf="@+id/message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068">
+
+        <TextView
+            android:id="@+id/messages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/messages"
+            android:textSize="18sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
